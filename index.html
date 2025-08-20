@@ -3,46 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essence - Perfume</title>
+    <title>Perfumo</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/aea1a58211.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<!-- Navbar -->
-<header class="navbar">
-    <h1 class="logo">Essence</h1>
-    <button id="themeToggle">☾</button>
+
+<header>
+    <nav class="menu">
+        <a href="#home" class="company"><i class="fa-solid fa-spray-can-sparkles"></i>PERFUMO</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#store">Store</a>
+        <a href="#contact">Contact</a>
+        <button class="cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        <i class="fas fa-bars hamburger" id="hamburger"></i>
+    </nav>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-    <h2>Elegance in Every Drop</h2>
-    <p>Discover the timeless fragrance crafted with passion.</p>
-    <button class="cta">Shop Now</button>
-</section>
-
-<!-- About Section -->
-<section class="about">
-    <h3>Our Philosophy</h3>
-    <p>
-        Essence is more than perfume—it’s an emotion. Each bottle is designed
-        with minimalism and sophistication, leaving a lasting impression.
-    </p>
-</section>
-
-<!-- Product Showcase -->
-<section class="product">
-    <img src="perfbottle.png" alt="Perfume Bottle">
-    <div class="product-info">
-        <h3>Signature Scent</h3>
-        <p>A delicate blend of floral and woody notes for those who love elegance.</p>
-        <button class="cta">Add to Cart</button>
+<!-- Home Section -->
+<section id="home" class="main-box">
+    <div class="content1">
+        <p class="intro">Customize your perfumes based on your preferences!</p>
+        <p class="desc1">Register to get updates about our latest perfumes</p>
+        <button class="shopnow">SHOP NOW</button>
+    </div>
+    <div class="image">
+        <div class="perfbottle"></div>
     </div>
 </section>
 
-<!-- Footer -->
-<footer>
-    <p>© 2025 Essence Perfume. All Rights Reserved.</p>
-</footer>
+<!-- About Section -->
+<section id="about">
+    <div class="abttext">
+        <h1><span class="auto-input"></span></h1>
+        <p class="tit1">Fragrance Families</p>
+        <p class="desc2">
+            Our perfumes are crafted with the finest ingredients, each belonging to a unique fragrance family that tells its own story. Explore the vibrant world of our fragrance families and discover the scent that resonates with your personal style.
+        </p>
+    </div>
+    <div class="abtimages">
+        <div class="floral"><img src="images/floral.jpg"><p class="a">FLORAL</p></div>
+        <div class="spicy"><img src="images/spicy.jpg"><p class="b">SPICY</p></div>
+        <div class="sweet"><img src="images/sweet.jpg"><p class="c">SWEET</p></div>
+        <div class="woody"><img src="images/woody.jpg"><p class="d">WOODY</p></div>
+    </div>
+</section>
+
+<!-- Store Section -->
+<section id="store">
+    <h1 class="tit2">Our Store</h1>
+    <p class="desc2">Visit our store to explore a variety of perfumes and customize your signature fragrance!</p>
+</section>
+
+<!-- Profile Section -->
+<section id="contact">
+    <h1 class="tit3">Contact Us</h1>
+    <p class="desc2">Manage your account, check your orders, and track your perfume preferences.</p>
+</section>
 
 <script src="script.js"></script>
 </body>

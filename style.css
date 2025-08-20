@@ -1,127 +1,246 @@
-/* Global Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Helvetica Neue", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #fdfdfd;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(214, 201, 182);
     color: #333;
-    transition: background 0.3s, color 0.3s;
-    line-height: 1.6;
 }
 
-/* Navbar */
-.navbar {
+/* Menu/Navbar */
+.menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%;
-    background: transparent;
-    position: sticky;
+    gap: 20px;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+     /* smooth background change */
 }
 
-.logo {
-    font-size: 1.5rem;
+.menu.scrolled {
+    background-color: rgba(200, 177, 150, 0.62);
+    backdrop-filter: blur(2px);
+    transition: background 0.3s ease;/* optional: soft blur */
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(105, 92, 74);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu a:hover {
+    color: rgb(38, 34, 34);
+    transform: scale(1.05) translateY(-2px);
+}
+
+.company {
     font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 20px;
+    color: rgb(133, 117, 95);
+    margin-right: auto;
 }
 
-#themeToggle {
-    border: none;
+.company:hover {
+    color: rgb(38, 34, 34);
+}
+
+.cart {
     background: none;
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 5rem 2rem;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: #666;
-}
-
-.cta {
-    padding: 0.8rem 2rem;
     border: none;
-    background: #111;
-    color: white;
-    font-size: 1rem;
-    border-radius: 25px;
     cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s;
 }
 
-.cta:hover {
-    background: #444;
-    transform: scale(1.05);
+.cart i {
+    color: rgb(101, 85, 62);
 }
 
-/* About */
-.about {
-    padding: 4rem 10%;
-    text-align: center;
-    max-width: 700px;
-    margin: auto;
+.cart i:hover {
+    color: rgb(38, 34, 34);
+    transform: scale(1.05) translateY(-2px);
 }
 
-.about h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-/* Product */
-.product {
-    display: flex;
+.intro{
+    color: rgb(101, 85, 62);
+    font-family: "poppins";
+    font-size: 30px;
+    font-weight: bold;
     flex-wrap: wrap;
+    display: flex;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.main-box {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 4rem 10%;
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
-.product img {
-    width: 250px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.content1 {
+    width: 500px;
+    margin-left: 150px;
 }
 
-.product-info {
-    max-width: 400px;
+.intro {
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(101, 85, 62);
 }
 
-/* Footer */
-footer {
+.desc1, .desc2 {
+    font-size: 20px;
+    color: rgb(101, 85, 62);
+    margin-top: 15px;
+}
+
+.tit1 , .tit2 , .tit3{
+    justify-itemsustify-items: center;
     text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
-    color: #888;
+    color: rgb(101, 85, 62);
+    font-family: poppins;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-/* Dark Mode */
-body.dark {
-    background: #111;
-    color: #fdfdfd;
+
+.shopnow {
+    margin-top: 20px;
+    background: rgb(133, 117, 95);
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
 
-body.dark .cta {
-    background: #fdfdfd;
-    color: #111;
+.shopnow:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: rgb(133, 117, 95);
+    transform: translateY(-5px);
+    transition: 0.4s;
 }
 
-body.dark .cta:hover {
-    background: #ccc;
+.image {
+    float: right;
+    margin-top: 50px;
+}
+
+.perfbottle {
+    width: 450px;
+    height: 450px;
+    background-image: url('images/perfbottle.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* About Images */
+.abtimages {
+    margin: auto;
+    padding: 100px;
+    width: 800px;
+    text-align: center;
+}
+
+.floral, .spicy, .sweet, .woody {
+    display: inline-block;
+    width: 345px;
+    height: 185px;
+    margin: 30px;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.floral img, .spicy img, .sweet img, .woody img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.floral:hover img, .spicy:hover img, .sweet:hover img, .woody:hover img {
+    transform: scale(1.03) translateY(-5px);
+    cursor: pointer;
+}
+
+/* Section background colors */
+/*#home { background-color: #FFF0C4; }*/
+/*#about { background-color: #916a78; }*/
+/*#store { background-color: #757166; }*/
+/*#profile { background-color: #8c6565; }*/
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .main-box {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+    .content1 {
+        width: 90%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .image {
+        float: none;
+        margin-top: 20px;
+    }
+
+    .perfbottle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .abtimages {
+        width: 100%;
+        padding: 50px 10px;
+    }
+
+    .floral, .spicy, .sweet, .woody {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    /* Show hamburger and hide links initially */
+    .menu a {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu.active a {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
 }
