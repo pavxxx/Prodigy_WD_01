@@ -31,3 +31,14 @@ links.forEach(link => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".contact-form");
+    const messageBox = document.getElementById("form-message");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        messageBox.style.display = "block"; // show message
+        form.reset();
+    });
+});

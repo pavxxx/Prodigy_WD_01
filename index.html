@@ -56,13 +56,63 @@
 <section id="store">
     <h1 class="tit2">Our Store</h1>
     <p class="desc2">Visit our store to explore a variety of perfumes and customize your signature fragrance!</p>
+    <section class="products">
+        <h2 class="fancy">~Newly in~</h2>
+        <div class="product-grid">
+            <!-- Perfume 1 -->
+            <div class="product-card">
+                <img src="images/perfume1.png" alt="Perfume 1">
+                <h3>Rose Essence</h3>
+                <p class="price">₹2000</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Perfume 2 -->
+            <div class="product-card">
+                <img src="images/perfume2.png" alt="Perfume 2">
+                <h3>Ocean Breeze</h3>
+                <p class="price">₹3500</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Perfume 3 -->
+            <div class="product-card">
+                <img src="images/perfume3.png" alt="Perfume 3">
+                <h3>Midnight Musk</h3>
+                <p class="price">₹4000</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
 </section>
 
 <!-- Profile Section -->
 <section id="contact">
     <h1 class="tit3">Contact Us</h1>
-    <p class="desc2">Manage your account, check your orders, and track your perfume preferences.</p>
+    <p class="desc2">Have questions about our perfumes? Send us a message!</p>
+    <p id="form-message" style="display:none; color:green; margin-top:10px;">
+         Your message has been sent!
+    </p>
+    <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
+<footer class="footer">
+    <div class="footer-content">
+        <h3>Perfumo</h3>
+        <p>Your destination for luxury fragrances.</p>
+        <ul class="footer-links">
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">© 2025 Perfumo . All rights reserved.</p>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
